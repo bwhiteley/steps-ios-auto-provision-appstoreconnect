@@ -190,10 +190,10 @@ func (e Entitlement) Capability() (*appstoreconnect.BundleIDCapability, error) {
 	}
 
 	// List of capabilities that the API does not support and prevent autoprovisioning
-	capabilitiesError := map[appstoreconnect.CapabilityType]string{
-		appstoreconnect.OnDemandInstallCapable:       "On Demand Install Capable (App Clips)",
-		appstoreconnect.ParentApplicationIdentifiers: "Parent Bundle ID",
-	}
+	//capabilitiesError := map[appstoreconnect.CapabilityType]string{
+		//appstoreconnect.OnDemandInstallCapable:       "On Demand Install Capable (App Clips)",
+		//appstoreconnect.ParentApplicationIdentifiers: "Parent Bundle ID",
+	//}
 
 	entKey := serialized.Object(e).Keys()[0]
 
