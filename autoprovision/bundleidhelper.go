@@ -47,6 +47,9 @@ func (c *APIProfileClient) FindBundleID(bundleIDIdentifier string) (*appstorecon
 }
 
 func checkBundleIDEntitlements(bundleIDEntitlements []appstoreconnect.BundleIDCapability, projectEntitlements Entitlement) error {
+	for _, cap := range bundleIDEntitlements {
+		log.Warnf("*** Bundle entitlement: %s", cap)
+	}
 	for k, v := range projectEntitlements {
 		log.Warnf("*** Project entitlement k: \"%s\" v: \"%s\".", k, v)
 		ent := Entitlement{k: v}
